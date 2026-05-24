@@ -126,15 +126,26 @@ img {
 }
 
 /* ================= HERO ================= */
-.hero {
-  position: relative;
-  min-height: 620px;
-  padding-top: 72px;
-  background:
-    linear-gradient(90deg, rgba(3, 16, 39, 0.98), rgba(5, 31, 74, 0.88), rgba(5, 22, 48, 0.92)),
-    radial-gradient(circle at 18% 45%, rgba(11, 115, 246, 0.35), transparent 26%),
-    linear-gradient(135deg, #061b3a, #082653);
-  overflow: hidden;
+.cn-text {
+  margin-top: -12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 28px;
+}
+
+.hero-highlights span {
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(143, 196, 255, 0.14);
+  border: 1px solid rgba(143, 196, 255, 0.3);
+  color: #d7e8ff;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .hero::before {
