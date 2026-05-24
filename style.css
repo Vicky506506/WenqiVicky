@@ -686,6 +686,51 @@ img {
   line-height: 1.65;
   margin-top: 16px;
 }
+/* Suning experience card */
+.suning-card {
+  padding: 30px 34px;
+  margin-top: 24px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.suning-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.suning-header h3 {
+  color: var(--navy);
+  font-size: 26px;
+  margin: 10px 0 6px;
+}
+
+.suning-badge {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fff7e8, #fff1d2);
+  color: #b46a00;
+  font-weight: 800;
+  font-size: 13px;
+  border: 1px solid rgba(180, 106, 0, 0.18);
+}
+
+.suning-badge i {
+  color: #e88b00;
+}
+
+.suning-focus-grid {
+  margin-top: 20px;
+}
 /* ================= COMPETITION ================= */
 .competition-grid {
   display: grid;
