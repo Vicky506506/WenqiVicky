@@ -443,150 +443,63 @@ img {
 }
 
 /* ================= EXPERIENCE ================= */
+/* Kingston internship card refinement */
 .internship-layout {
   display: grid;
-  grid-template-columns: 1fr 250px;
+  grid-template-columns: minmax(0, 1fr) 310px;
   gap: 24px;
+  align-items: stretch;
   margin-bottom: 22px;
-}
-
-.experience-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
 }
 
 .featured-card {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 1fr);
   overflow: hidden;
 }
 
 .company-panel {
   background: linear-gradient(180deg, #f7fbff, #edf5ff);
-  padding: 28px;
+  padding: 34px 30px;
   border-right: 1px solid var(--border);
 }
 
 .company-logo {
-  width: 78px;
-  height: 78px;
+  width: 94px;
+  height: 94px;
   object-fit: contain;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(13, 42, 88, 0.1);
 }
 
 .company-panel h3 {
-  font-size: 23px;
-  line-height: 1.1;
+  font-size: 24px;
+  line-height: 1.18;
   color: var(--navy);
   margin-bottom: 28px;
 }
 
-.company-panel p {
-  font-size: 14px;
+.company-date {
+  color: var(--blue) !important;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.company-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--muted);
-  margin-bottom: 10px;
 }
 
 .experience-content {
-  padding: 30px;
+  padding: 34px 36px;
 }
 
-.experience-content h3 {
-  font-size: 22px;
-  margin-bottom: 14px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.tags span {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: var(--blue-light);
-  color: #0056d6;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.experience-content ul,
-.simple-card ul {
-  padding-left: 18px;
-}
-
-.experience-content li,
-.simple-card li {
-  margin-bottom: 8px;
-  color: #31405c;
-}
-
-.result-panel {
-  background: linear-gradient(180deg, #f6fbff, #eaf3ff);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 22px;
-  display: grid;
-  gap: 16px;
-}
-
-.result-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border);
-}
-
-.result-item:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.result-item i {
-  width: 48px;
-  height: 48px;
-  background: var(--white);
-  color: var(--blue);
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 21px;
-  box-shadow: 0 8px 18px rgba(13, 42, 88, 0.12);
-}
-
-.result-item strong {
-  display: block;
-  font-size: 26px;
-  color: var(--blue);
-}
-
-.result-item span {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.simple-card {
-  padding: 24px 28px;
-  margin-top: 18px;
-}
-
-.simple-card h3 {
-  font-size: 20px;
-  color: var(--navy);
-}
-
-.date {
-  color: var(--blue);
-  font-weight: 800;
-  margin: 4px 0 12px;
-}
 .experience-label {
   display: inline-flex;
   padding: 6px 12px;
@@ -595,6 +508,12 @@ img {
   color: var(--blue);
   font-size: 13px;
   font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.experience-content h3 {
+  font-size: 28px;
+  color: var(--navy);
   margin-bottom: 12px;
 }
 
@@ -660,6 +579,111 @@ img {
   color: var(--blue);
   font-size: 12.5px;
   font-weight: 800;
+}
+
+/* Right platform data panel */
+.platform-data-panel {
+  background: linear-gradient(180deg, #f6fbff, #eaf3ff);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.platform-tab {
+  border: 1px solid rgba(11, 115, 246, 0.18);
+  background: #ffffff;
+  color: var(--blue);
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.platform-tab.active,
+.platform-tab:hover {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.platform-data-content {
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(220, 228, 241, 0.8);
+  border-radius: 18px;
+  padding: 18px;
+  flex: 1;
+}
+
+.data-label {
+  display: inline-flex;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.platform-data-content h3 {
+  color: var(--navy);
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.platform-metric {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.platform-metric:last-of-type {
+  border-bottom: 0;
+}
+
+.platform-metric i {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 8px 18px rgba(13, 42, 88, 0.1);
+}
+
+.platform-metric strong {
+  display: block;
+  color: var(--blue);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.platform-metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.platform-note {
+  color: #4d5b72;
+  font-size: 13px;
+  line-height: 1.65;
+  margin-top: 16px;
 }
 /* ================= COMPETITION ================= */
 .competition-grid {
