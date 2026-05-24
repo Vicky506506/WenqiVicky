@@ -1516,352 +1516,402 @@ img {
 
 .case-detail-btn:hover {
   text-decoration: underline;
+}/* ================= CASE DETAIL PAGE - CLEAN PORTFOLIO STYLE ================= */
+
+/* 整体背景 */
+.case-page {
+  background: #f3f7ff;
+  min-height: 100vh;
+  padding-top: 96px;
 }
 
-/* ================= CASE DETAIL MODAL ================= */
-.case-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: none;
+/* 页面主体宽度更像截图里的白色卡片 */
+.case-page-hero,
+.case-page-content {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.case-modal.active {
-  display: block;
+.case-page .container {
+  max-width: 1120px;
 }
 
-.case-modal-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(4, 18, 42, 0.68);
-  backdrop-filter: blur(6px);
+/* 顶部返回链接做成 breadcrumb 感觉 */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #66758f;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 18px;
 }
 
-.case-modal-content {
+.back-link i {
+  color: var(--blue);
+}
+
+.back-link:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* 顶部标题卡片：更像图片里的作品集详情页 */
+.case-page-header {
   position: relative;
-  width: min(1180px, calc(100% - 42px));
-  max-height: calc(100vh - 42px);
-  margin: 21px auto;
-  background: #f5f8ff;
-  border-radius: 26px;
-  overflow-y: auto;
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
-}
-
-.case-modal-close {
-  position: sticky;
-  top: 18px;
-  left: calc(100% - 62px);
-  z-index: 2;
-  width: 42px;
-  height: 42px;
-  border: none;
-  border-radius: 50%;
+  padding: 34px 38px 34px 270px;
   background: #ffffff;
-  color: var(--navy);
-  box-shadow: 0 8px 22px rgba(13, 42, 88, 0.15);
-  cursor: pointer;
-  font-size: 18px;
+  border: 1px solid rgba(11, 115, 246, 0.12);
+  border-radius: 26px 26px 0 0;
+  box-shadow: none;
+  min-height: 210px;
 }
 
-.case-modal-body {
-  padding: 26px 34px 38px;
+/* 左侧模拟项目封面图区域 */
+.case-page-header::before {
+  content: "";
+  position: absolute;
+  left: 38px;
+  top: 34px;
+  width: 185px;
+  height: 145px;
+  border-radius: 16px;
+  background:
+    linear-gradient(rgba(5, 22, 52, 0.25), rgba(5, 22, 52, 0.25)),
+    url("1.1.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 24px rgba(13, 42, 88, 0.12);
 }
 
-.case-detail-header {
-  padding: 28px;
-  background: linear-gradient(135deg, #ffffff, #eaf3ff);
-  border: 1px solid rgba(11, 115, 246, 0.15);
-  border-radius: 22px;
-  margin-bottom: 24px;
-}
-
+/* 标签 */
 .case-detail-label {
   display: inline-flex;
-  padding: 8px 14px;
+  padding: 8px 17px;
   border-radius: 999px;
   background: var(--blue);
   color: #ffffff;
   font-size: 13px;
   font-weight: 900;
-  margin-bottom: 14px;
-}
-
-.case-detail-header h2 {
-  color: var(--navy);
-  font-size: 34px;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.case-detail-header h3 {
-  color: var(--blue);
-  font-size: 24px;
-  line-height: 1.35;
   margin-bottom: 16px;
 }
 
-.case-detail-header p {
-  color: #31405c;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.case-detail-section {
-  background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 24px;
-  margin-bottom: 22px;
-  box-shadow: 0 10px 28px rgba(13, 42, 88, 0.08);
-}
-
-.case-detail-section h4 {
+/* 标题 */
+.case-page-header h1 {
   color: var(--navy);
-  font-size: 22px;
-  margin-bottom: 14px;
+  font-size: 34px;
+  line-height: 1.18;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
 }
 
+.case-page-header h2 {
+  color: var(--navy);
+  font-size: 25px;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+/* 顶部概述文字先隐藏，让页面更像你图里的简洁标题区 */
+.case-page-header p {
+  display: none;
+}
+
+/* 内容大白卡片 */
+.case-page-content {
+  padding: 0 0 70px;
+}
+
+.case-page-grid {
+  display: block;
+  background: #ffffff;
+  border: 1px solid rgba(11, 115, 246, 0.12);
+  border-top: none;
+  border-radius: 0 0 26px 26px;
+  padding: 0 38px 38px;
+  box-shadow: 0 18px 45px rgba(13, 42, 88, 0.10);
+}
+
+.case-page-main {
+  display: block;
+}
+
+/* 每一个模块做成横向信息行 */
+.case-detail-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px 230px minmax(0, 1fr);
+  column-gap: 24px;
+  align-items: start;
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 34px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(13, 42, 88, 0.10);
+}
+
+/* 左侧 icon 方块 */
+.case-detail-section::before {
+  content: "\f15c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #eaf3ff;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: inset 0 0 0 1px rgba(11, 115, 246, 0.10);
+}
+
+/* 不同模块的图标 */
+.case-page-main .case-detail-section:nth-child(1)::before {
+  content: "\f15c";
+}
+
+.case-page-main .case-detail-section:nth-child(2)::before {
+  content: "\f201";
+}
+
+.case-page-main .case-detail-section:nth-child(3)::before {
+  content: "\f140";
+}
+
+.case-page-main .case-detail-section:nth-child(4)::before {
+  content: "\f03e";
+}
+
+/* 模块标题放在第二列 */
+.case-detail-section h3 {
+  grid-column: 2;
+  color: var(--navy);
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* 让英文中文标题自动更有层次 */
+.case-detail-section h3::first-line {
+  font-weight: 900;
+}
+
+/* 列表和正文放在第三列 */
+.case-detail-section .case-detail-list,
+.case-detail-section p,
+.case-detail-section .case-preview-grid {
+  grid-column: 3;
+}
+
+/* 列表样式 */
 .case-detail-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .case-detail-list li {
-  padding: 14px 16px;
-  background: #f5f9ff;
-  border: 1px solid rgba(11, 115, 246, 0.12);
-  border-radius: 14px;
-  color: #31405c;
-  line-height: 1.7;
-  font-size: 15px;
+  position: relative;
+  padding: 0 0 0 20px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #2f3b52;
+  font-size: 15.5px;
+  line-height: 1.75;
 }
 
-.case-preview-grid {
+.case-detail-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+/* 分析重点文字 */
+.case-detail-section p {
+  color: #2f3b52;
+  font-size: 15.5px;
+  line-height: 1.85;
+  margin: 0 0 10px;
+}
+
+/* 预览材料：改成横向小缩略图 */
+.case-page .case-preview-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
 }
 
 .case-preview-item {
   background: #ffffff;
   border: 1px solid rgba(11, 115, 246, 0.14);
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(13, 42, 88, 0.08);
+  box-shadow: 0 8px 18px rgba(13, 42, 88, 0.08);
 }
 
 .case-preview-item img {
   width: 100%;
-  height: auto;
+  height: 118px;
+  object-fit: cover;
+  object-position: top;
   display: block;
 }
 
 .case-preview-caption {
-  padding: 12px 14px;
+  padding: 9px 8px;
   color: var(--blue);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 900;
+  line-height: 1.35;
   text-align: center;
+  background: #f7fbff;
 }
 
+/* 右侧 sidebar 改成底部横向模块 */
+.case-page-sidebar {
+  position: static;
+  display: block;
+}
+
+.case-sidebar-card {
+  display: grid;
+  grid-template-columns: 72px 230px minmax(0, 1fr);
+  column-gap: 24px;
+  align-items: start;
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 34px 0;
+  border-bottom: 1px solid rgba(13, 42, 88, 0.10);
+}
+
+/* sidebar icon */
+.case-sidebar-card::before {
+  content: "\f007";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #eaf3ff;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: inset 0 0 0 1px rgba(11, 115, 246, 0.10);
+}
+
+.case-sidebar-card:nth-child(2)::before {
+  content: "\f0eb";
+}
+
+.case-sidebar-card h3 {
+  grid-column: 2;
+  color: var(--navy);
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.case-sidebar-card p,
+.case-sidebar-card .case-skill-tags {
+  grid-column: 3;
+}
+
+/* 技能标签 */
 .case-skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .case-skill-tags span {
   display: inline-flex;
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 999px;
-  background: #edf5ff;
+  background: #eef6ff;
   color: var(--blue);
-  border: 1px solid rgba(11, 115, 246, 0.16);
+  border: none;
   font-size: 13px;
   font-weight: 900;
 }
 
-/* Responsive */
-@media (max-width: 1100px) {
-  .minimal-case-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .case-preview-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 620px) {
-  .minimal-case-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .case-modal-content {
-    width: calc(100% - 18px);
-    margin: 9px auto;
-    max-height: calc(100vh - 18px);
-    border-radius: 20px;
-  }
-
-  .case-modal-body {
-    padding: 20px 16px 28px;
-  }
-
-  .case-detail-header h2 {
-    font-size: 26px;
-  }
-
-  .case-detail-header h3 {
-    font-size: 20px;
-  }
-}
-/* ================= CASE DETAIL PAGE ================= */
-.case-page {
-  background: #f4f8ff;
-  min-height: 100vh;
-  padding-top: 92px;
-}
-
-.case-page-hero {
-  padding: 48px 0 24px;
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--blue);
-  font-weight: 900;
-  text-decoration: none;
-  margin-bottom: 22px;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-.case-page-header {
-  padding: 34px;
-  background: linear-gradient(135deg, #ffffff, #eaf3ff);
-  border: 1px solid rgba(11, 115, 246, 0.15);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-}
-
-.case-page-header h1 {
-  color: var(--navy);
-  font-size: 42px;
-  line-height: 1.15;
-  margin: 14px 0 8px;
-}
-
-.case-page-header h2 {
-  color: var(--blue);
-  font-size: 30px;
-  line-height: 1.3;
-  margin-bottom: 18px;
-}
-
-.case-page-header p {
-  color: #31405c;
-  font-size: 16px;
-  line-height: 1.85;
-  margin-bottom: 12px;
-}
-
-.case-page-content {
-  padding: 12px 0 70px;
-}
-
-.case-page-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  gap: 26px;
-  align-items: start;
-}
-
-.case-page-main {
-  display: grid;
-  gap: 22px;
-}
-
-.case-page-sidebar {
-  display: grid;
-  gap: 20px;
-  position: sticky;
-  top: 110px;
-}
-
-.case-sidebar-card {
-  padding: 22px;
-  background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-}
-
-.case-sidebar-card h3 {
-  color: var(--navy);
-  font-size: 20px;
-  margin-bottom: 14px;
-}
-
 .case-sidebar-card p {
-  color: #31405c;
-  font-size: 14.5px;
-  line-height: 1.75;
-  margin-bottom: 10px;
-}
-
-.case-detail-section p {
-  color: #31405c;
-  font-size: 15.5px;
-  line-height: 1.85;
-  margin-bottom: 12px;
-}
-
-/* For separate case page image display */
-.case-page .case-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.case-page .case-preview-item img {
-  width: 100%;
-  display: block;
-}
-
-/* Make case card link look like old button */
-.case-detail-link {
-  display: inline-flex;
-  color: var(--blue);
+  color: #2f3b52;
   font-size: 15px;
-  font-weight: 900;
-  text-decoration: none;
+  line-height: 1.8;
+  margin: 0 0 10px;
 }
 
-.case-detail-link:hover {
-  text-decoration: underline;
+/* 关闭按钮效果：如果你后面加 X，可直接适配 */
+.case-page-close {
+  position: fixed;
+  top: 112px;
+  right: 38px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--navy);
+  border: 1px solid rgba(13, 42, 88, 0.12);
+  box-shadow: 0 8px 20px rgba(13, 42, 88, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsive */
+/* 响应式 */
 @media (max-width: 980px) {
-  .case-page-grid {
-    grid-template-columns: 1fr;
+  .case-page-header {
+    padding: 30px;
   }
 
-  .case-page-sidebar {
+  .case-page-header::before {
     position: static;
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 22px;
   }
 
-  .case-page-header h1 {
-    font-size: 34px;
+  .case-page-grid {
+    padding: 0 28px 34px;
+  }
+
+  .case-detail-section,
+  .case-sidebar-card {
+    grid-template-columns: 64px 1fr;
+    row-gap: 14px;
+  }
+
+  .case-detail-section h3,
+  .case-sidebar-card h3 {
+    grid-column: 2;
+  }
+
+  .case-detail-section .case-detail-list,
+  .case-detail-section p,
+  .case-detail-section .case-preview-grid,
+  .case-sidebar-card p,
+  .case-sidebar-card .case-skill-tags {
+    grid-column: 1 / -1;
+  }
+
+  .case-page .case-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1870,19 +1920,55 @@ img {
     padding-top: 76px;
   }
 
+  .case-page-hero {
+    padding-top: 28px;
+  }
+
   .case-page-header {
-    padding: 24px;
+    padding: 22px;
+    border-radius: 20px 20px 0 0;
   }
 
   .case-page-header h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .case-page-header h2 {
-    font-size: 22px;
+    font-size: 21px;
+  }
+
+  .case-page-grid {
+    padding: 0 20px 28px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .case-detail-section,
+  .case-sidebar-card {
+    grid-template-columns: 1fr;
+    padding: 26px 0;
+  }
+
+  .case-detail-section::before,
+  .case-sidebar-card::before {
+    width: 52px;
+    height: 52px;
+  }
+
+  .case-detail-section h3,
+  .case-sidebar-card h3,
+  .case-detail-section .case-detail-list,
+  .case-detail-section p,
+  .case-detail-section .case-preview-grid,
+  .case-sidebar-card p,
+  .case-sidebar-card .case-skill-tags {
+    grid-column: 1;
   }
 
   .case-page .case-preview-grid {
     grid-template-columns: 1fr;
   }
-}
+
+  .case-preview-item img {
+    height: auto;
+  }
+}  
