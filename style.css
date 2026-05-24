@@ -1192,3 +1192,71 @@ img {
   .hero-photo {
     width: 260px;
   }
+/* ================= PROJECT EVIDENCE / PROOF GALLERY ================= */
+.proof-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.proof-gallery-one {
+  grid-template-columns: 1fr;
+}
+
+.proof-gallery a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(11, 115, 246, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proof-gallery a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(13, 42, 88, 0.14);
+}
+
+.proof-gallery img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  background: #edf3fb;
+}
+
+.proof-gallery span {
+  display: block;
+  padding: 9px 10px;
+  color: var(--blue);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.pdf-proof-card {
+  min-height: 110px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #ffffff, #f3f8ff);
+}
+
+.pdf-proof-card i {
+  font-size: 30px;
+  color: var(--blue);
+}
+
+.pdf-proof-card span {
+  text-align: center;
+  padding: 0;
+}
+.enhanced-competition-card:last-child .proof-gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
