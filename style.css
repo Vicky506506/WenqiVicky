@@ -339,18 +339,91 @@ img {
   font-size: 14px;
   font-weight: 800;
 }
-
 /* ================= ABOUT ================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
 .about-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 26px;
+  padding: 28px;
   box-shadow: var(--shadow);
 }
 
-.about-card p + p {
-  margin-top: 14px;
+.about-main h3 {
+  color: var(--navy);
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.about-main p {
+  color: #31405c;
+  margin-bottom: 14px;
+}
+
+.cn-text-dark {
+  color: #4d5b72;
+  font-size: 15px;
+  line-height: 1.8;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.strength-card {
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.strength-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(11, 115, 246, 0.35);
+}
+
+.strength-card i {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--blue-light);
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.strength-card h4 {
+  color: var(--navy);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.strength-card p {
+  color: #31405c;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.strength-card span {
+  display: inline-flex;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 /* ================= EXPERIENCE ================= */
