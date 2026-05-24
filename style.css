@@ -1293,3 +1293,40 @@ img {
   margin-top: 8px;
   text-align: center;
 }
+/* ================= STATIC PROJECT EVIDENCE DISPLAY ================= */
+.proof-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.proof-gallery-one {
+  grid-template-columns: 1fr;
+}
+
+.proof-static-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(11, 115, 246, 0.14);
+  box-shadow: 0 8px 18px rgba(13, 42, 88, 0.08);
+}
+
+.proof-static-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  background: #edf3fb;
+}
+
+.proof-static-card span {
+  display: block;
+  padding: 9px 10px;
+  color: var(--blue);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+}
