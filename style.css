@@ -1972,3 +1972,11 @@ img {
     height: auto;
   }
 }  
+/* JB Hi-Fi detail page cover image */
+.jbh-case-page .case-page-header::before {
+  background:
+    linear-gradient(rgba(5, 22, 52, 0.12), rgba(5, 22, 52, 0.12)),
+    url("2.1.png");
+  background-size: cover;
+  background-position: center;
+}
