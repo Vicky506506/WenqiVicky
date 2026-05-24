@@ -1,1 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wenqi Tian Portfolio</title>
 
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">W</span>
+        <span>WENQI TIAN</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#internship" class="nav-link">Internship Experience</a>
+        <a href="#competition" class="nav-link">Competition Experience</a>
+        <a href="#case-analysis" class="nav-link">Case Analysis</a>
+        <a href="#performance" class="nav-link">Performance</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-photo-wrap">
+        <!-- 需要替换：把你的头像命名为 profile.jpg，放进 assets 文件夹 -->
+        <img src="assets/profile.jpg" alt="Wenqi Tian Profile Photo" class="hero-photo" />
+      </div>
+
+      <div class="hero-content">
+        <p class="pill">Aspiring Marketing & Business Professional</p>
+
+        <h1>Wenqi Tian / 田文琪</h1>
+
+        <h2>Marketing · Business · Finance</h2>
+
+        <p class="hero-text">
+          Business student at RMIT University with hands-on experience in digital marketing,
+          social media operations, bilingual content creation and business coordination.
+          I enjoy turning data and creativity into practical solutions that drive real results.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#case-analysis" class="btn btn-primary">
+            View My Work <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <!-- 需要替换：如果你有 PDF 简历，可以放进 assets/resume.pdf -->
+          <a href="assets/resume.pdf" class="btn btn-outline" target="_blank">
+            Download Resume <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+
+        <div class="hero-icons">
+          <!-- 需要替换：你的 LinkedIn 链接 -->
+          <a href="https://www.linkedin.com/in/wenqi-tian-7483b3377" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <!-- 需要替换：你的常用邮箱 -->
+          <a href="mailto:s4177990@student.rmit.edu.au">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+
+          <!-- 需要替换：如果你有在线简历或作品集 PDF，可以改这里 -->
+          <a href="#contact">
+            <i class="fa-regular fa-file-lines"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon"><i class="fa-solid fa-user"></i></span>
+          <div>
+            <h2>About Me</h2>
+            <p>Marketing-focused business profile with finance background</p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <p>
+            I am currently studying Bachelor of Business, majoring in Finance at RMIT University.
+            My experience covers digital marketing support, social media content management,
+            bilingual communication, competitor research, event coordination and business support.
+          </p>
+
+          <p>
+            My career direction focuses on marketing operations, brand marketing, content operations,
+            business operations and management trainee roles, especially in multinational companies
+            and consumer-facing industries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERNSHIP EXPERIENCE ================= -->
+    <section class="section" id="internship">
+      <div class="container">
+        <div class="section-heading with-link">
+          <div class="heading-left">
+            <span class="section-icon"><i class="fa-solid fa-briefcase"></i></span>
+            <div>
+              <h2>Internship Experience</h2>
+              <p>Marketing, social media operations and business coordination</p>
+            </div>
+          </div>
+          <a href="#contact" class="view-link">View All <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+        <div class="internship-layout">
+          <article class="experience-card featured-card">
+            <div class="company-panel">
+              <!-- 需要替换：Kingston logo，如果没有可以先删除 img -->
+              <img src="assets/kingston-logo.png" alt="Kingston Academy Logo" class="company-logo" />
+              <h3>Kingston Academy<br />of Australia</h3>
+              <p>Nov 2025 – May 2026</p>
+              <p><i class="fa-solid fa-location-dot"></i> Melbourne, Australia</p>
+            </div>
+
+            <div class="experience-content">
+              <h3>Marketing & Coordination Intern</h3>
+
+              <div class="tags">
+                <span>Social Media</span>
+                <span>Content Creation</span>
+                <span>Bilingual Communication</span>
+                <span>Outreach</span>
+              </div>
+
+              <ul>
+                <li>
+                  Managed and updated social media content across RedBook, TikTok,
+                  Facebook, Instagram and LinkedIn.
+                </li>
+                <li>
+                  Created bilingual promotional materials and campaign content to support
+                  student engagement and brand visibility.
+                </li>
+                <li>
+                  Conducted competitor and content analysis to improve platform communication
+                  and brand consistency.
+                </li>
+                <li>
+                  Assisted with outreach to potential agents and collaboration partners through
+                  email and social platforms.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="result-panel">
+            <div class="result-item">
+              <i class="fa-solid fa-chart-line"></i>
+              <!-- 需要替换：这里可以改成你最终确认的数据 -->
+              <div>
+                <strong>+827%</strong>
+                <span>Page View Growth</span>
+              </div>
+            </div>
+
+            <div class="result-item">
+              <i class="fa-solid fa-eye"></i>
+              <!-- 需要替换：这里可以改成 Meta 后台总浏览量 -->
+              <div>
+                <strong>1,742</strong>
+                <span>Total Views</span>
+              </div>
+            </div>
+
+            <div class="result-item">
+              <i class="fa-solid fa-users"></i>
+              <!-- 需要替换：这里可以改成你最终确认的受众数据 -->
+              <div>
+                <strong>73.3%</strong>
+                <span>Audience from Australia</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <article class="experience-card simple-card">
+          <div>
+            <h3>Suning.com Ltd · Field Expansion Sales Intern</h3>
+            <p class="date">Jan 2025 – Feb 2025 · Hangzhou, China</p>
+          </div>
+          <ul>
+            <li>Supported field sales and market expansion activities through market observation and competitor monitoring.</li>
+            <li>Collected competitor information to support sales and promotional strategy adjustment.</li>
+            <li>Strengthened customer-facing communication, commercial awareness and teamwork skills.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card simple-card">
+          <div>
+            <h3>RMIT High Velocity · Event Coordinator</h3>
+            <p class="date">Dec 2025 – Present · Melbourne, Australia</p>
+          </div>
+          <ul>
+            <li>Assisted with team activity planning, internal event coordination and meeting follow-up.</li>
+            <li>Supported scheduling, documentation and communication to maintain project progress.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= COMPETITION EXPERIENCE ================= -->
+    <section class="section alt-section" id="competition">
+      <div class="container">
+        <div class="section-heading with-link">
+          <div class="heading-left">
+            <span class="section-icon"><i class="fa-solid fa-trophy"></i></span>
+            <div>
+              <h2>Competition Experience</h2>
+              <p>Business creativity, ESG analysis and e-commerce innovation</p>
+            </div>
+          </div>
+          <a href="#contact" class="view-link">View All <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+        <div class="competition-grid">
+          <article class="competition-card">
+            <div class="competition-title-row">
+              <h3>L’Oréal Brandstorm 2025</h3>
+              <span>Marketing</span>
+            </div>
+            <p>
+              Developed an innovative men’s skincare product concept by identifying consumer
+              pain points related to hydration, convenience and sensitive skin care.
+            </p>
+          </article>
+
+          <article class="competition-card">
+            <div class="competition-title-row">
+              <h3>IMA Case Competition</h3>
+              <span>ESG</span>
+            </div>
+            <p>
+              Led ESG-related case analysis for Haier, evaluated risks and opportunities,
+              and developed sustainability recommendations based on ESG frameworks.
+            </p>
+          </article>
+
+          <article class="competition-card">
+            <div class="competition-title-row">
+              <h3>E-commerce Innovation Competition</h3>
+              <span>First Prize</span>
+            </div>
+            <p>
+              Designed an online business model combining livestreaming, cultural storytelling
+              and product sales. Awarded First Prize, Best Idea and Best Innovation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CASE ANALYSIS ================= -->
+    <section class="section" id="case-analysis">
+      <div class="container">
+        <div class="section-heading with-link">
+          <div class="heading-left">
+            <span class="section-icon"><i class="fa-solid fa-folder"></i></span>
+            <div>
+              <h2>Case Analysis</h2>
+              <p>Selected academic and business projects</p>
+            </div>
+          </div>
+          <a href="#contact" class="view-link">View All <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <!-- 需要替换：案例图片 -->
+            <div class="case-image image-finance"></div>
+            <div class="case-content">
+              <span class="case-tag">Finance</span>
+              <h3>Valuation Analysis Report</h3>
+              <p>
+                Company valuation using DCF, comparable analysis, sensitivity analysis
+                and scenario evaluation.
+              </p>
+              <!-- 需要替换：如果你有 PDF 文件，可以放 assets/valuation-report.pdf -->
+              <a href="#" class="case-link">Coming Soon</a>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-image image-marketing"></div>
+            <div class="case-content">
+              <span class="case-tag">Marketing</span>
+              <h3>Market Entry Strategy</h3>
+              <p>
+                STP, competitor analysis and go-to-market strategy for a new product or campaign.
+              </p>
+              <a href="#" class="case-link">Coming Soon</a>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-image image-business"></div>
+            <div class="case-content">
+              <span class="case-tag">Business</span>
+              <h3>Business Model Evaluation</h3>
+              <p>
+                Business model canvas, revenue streams, key risks and operational improvement ideas.
+              </p>
+              <a href="#" class="case-link">Coming Soon</a>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-image image-report"></div>
+            <div class="case-content">
+              <span class="case-tag">Finance</span>
+              <h3>Financial Statement Analysis</h3>
+              <p>
+                Ratio analysis and trend evaluation of company performance, profitability and risks.
+              </p>
+              <a href="#" class="case-link">Coming Soon</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PERFORMANCE SNAPSHOT ================= -->
+    <section class="section alt-section" id="performance">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon"><i class="fa-solid fa-chart-column"></i></span>
+          <div>
+            <h2>Performance Snapshot</h2>
+            <p>Marketing internship data and platform insights</p>
+          </div>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="metric-card">
+            <i class="fa-solid fa-eye"></i>
+            <!-- 需要替换：Meta 主页浏览量 -->
+            <strong>1,085</strong>
+            <span>Page Views</span>
+            <small>+827.4% vs. previous period</small>
+          </article>
+
+          <article class="metric-card">
+            <i class="fa-solid fa-chart-pie"></i>
+            <!-- 需要替换：总浏览量 -->
+            <strong>1,742</strong>
+            <span>Total Views</span>
+            <small>+84% vs. previous period</small>
+          </article>
+
+          <article class="metric-card">
+            <i class="fa-solid fa-globe"></i>
+            <!-- 需要替换：澳洲受众比例 -->
+            <strong>73.3%</strong>
+            <span>Audience from Australia</span>
+            <small>Primary audience location</small>
+          </article>
+
+          <article class="metric-card">
+            <i class="fa-solid fa-comments"></i>
+            <!-- 需要替换：互动量 -->
+            <strong>34</strong>
+            <span>Engagements</span>
+            <small>+100% vs. previous period</small>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="dashboard-card">
+            <h3>Meta Performance Insight</h3>
+            <!-- 需要替换：上传截图到 assets/meta-performance-1.png -->
+            <img src="assets/meta-performance-1.png" alt="Meta Performance Screenshot" />
+          </article>
+
+          <article class="dashboard-card">
+            <h3>Content Type Analysis</h3>
+            <!-- 需要替换：上传截图到 assets/meta-content-type.png -->
+            <img src="assets/meta-content-type.png" alt="Content Type Screenshot" />
+          </article>
+
+          <article class="dashboard-card">
+            <h3>Audience Location</h3>
+            <!-- 需要替换：上传截图到 assets/meta-audience-location.png -->
+            <img src="assets/meta-audience-location.png" alt="Audience Location Screenshot" />
+          </article>
+
+          <article class="dashboard-card">
+            <h3>LinkedIn Performance</h3>
+            <!-- 需要替换：上传截图到 assets/linkedin-performance.png -->
+            <img src="assets/linkedin-performance.png" alt="LinkedIn Performance Screenshot" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <h2>I bridge data and creativity to solve problems, create value and drive growth.</h2>
+          <p>以数据与创意连接商业与人心，创造有影响力的解决方案。</p>
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:s4177990@student.rmit.edu.au" class="btn btn-primary">
+            Let's Connect <i class="fa-regular fa-comment"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Wenqi Tian. Personal Portfolio Website.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
