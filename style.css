@@ -209,7 +209,6 @@ img {
   font-size: clamp(42px, 4.8vw, 58px);
   line-height: 1.08;
   margin-bottom: 14px;
-  white-space: nowrap;
   color: #ffffff;
 }
 
