@@ -446,7 +446,7 @@ img {
 /* Kingston internship card refinement */
 .internship-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 310px;
+  grid-template-columns: minmax(0, 1fr) 360px;
   gap: 24px;
   align-items: stretch;
   margin-bottom: 22px;
@@ -605,10 +605,11 @@ img {
   color: var(--blue);
   border-radius: 999px;
   padding: 8px 10px;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .platform-tab.active,
