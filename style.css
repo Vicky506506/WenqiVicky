@@ -1720,3 +1720,169 @@ img {
     font-size: 20px;
   }
 }
+/* ================= CASE DETAIL PAGE ================= */
+.case-page {
+  background: #f4f8ff;
+  min-height: 100vh;
+  padding-top: 92px;
+}
+
+.case-page-hero {
+  padding: 48px 0 24px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.case-page-header {
+  padding: 34px;
+  background: linear-gradient(135deg, #ffffff, #eaf3ff);
+  border: 1px solid rgba(11, 115, 246, 0.15);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.case-page-header h1 {
+  color: var(--navy);
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 14px 0 8px;
+}
+
+.case-page-header h2 {
+  color: var(--blue);
+  font-size: 30px;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+.case-page-header p {
+  color: #31405c;
+  font-size: 16px;
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+.case-page-content {
+  padding: 12px 0 70px;
+}
+
+.case-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 26px;
+  align-items: start;
+}
+
+.case-page-main {
+  display: grid;
+  gap: 22px;
+}
+
+.case-page-sidebar {
+  display: grid;
+  gap: 20px;
+  position: sticky;
+  top: 110px;
+}
+
+.case-sidebar-card {
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.case-sidebar-card h3 {
+  color: var(--navy);
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.case-sidebar-card p {
+  color: #31405c;
+  font-size: 14.5px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.case-detail-section p {
+  color: #31405c;
+  font-size: 15.5px;
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+/* For separate case page image display */
+.case-page .case-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.case-page .case-preview-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Make case card link look like old button */
+.case-detail-link {
+  display: inline-flex;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.case-detail-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .case-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-page-sidebar {
+    position: static;
+  }
+
+  .case-page-header h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 620px) {
+  .case-page {
+    padding-top: 76px;
+  }
+
+  .case-page-header {
+    padding: 24px;
+  }
+
+  .case-page-header h1 {
+    font-size: 28px;
+  }
+
+  .case-page-header h2 {
+    font-size: 22px;
+  }
+
+  .case-page .case-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
