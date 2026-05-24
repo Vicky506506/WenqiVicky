@@ -807,6 +807,13 @@ img {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 980px) {
+  .about-grid {
+  grid-template-columns: 1fr;
+}
+
+.strength-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
   .nav-menu {
     position: absolute;
     top: 72px;
@@ -888,8 +895,10 @@ img {
     text-align: center;
   }
 }
-
 @media (max-width: 620px) {
+  .strength-grid {
+  grid-template-columns: 1fr;
+}
   .container {
     width: min(100% - 28px, 1120px);
   }
