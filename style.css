@@ -1378,8 +1378,10 @@ img {
 .ima-proof-gallery {
   grid-template-columns: repeat(2, 1fr);
 }
+.loreal-proof-gallery {
+  grid-template-columns: repeat(2, 1fr);
+}
 
-.loreal-proof-gallery,
 .ecommerce-proof-gallery {
   grid-template-columns: repeat(3, 1fr);
 }
